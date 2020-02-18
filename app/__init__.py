@@ -8,15 +8,10 @@ from config import config_options
 # from config import Config
 app = Flask(__name__)    
 SECRET_KEY = 'hahaha'
-
-
-
-
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 bootstrap = Bootstrap(app)
 mail = Mail(app)
-
 login_manager.login_view = 'auth.login'
 login_manager.session_protection = 'strong'
 
